@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="insert orders into orders table" author="suhareva">
+        <insert tableName="ORDERS">
+            <column name="ID" value="123456789"></column>
+            <column name="NUMBER" value="1838020241120"></column>
+            <column name="TOTAL_AMOUNT" value="1000"/>
+            <column name="ORDER_DATE" value="2024-11-20T20:20:00.456+00:0"/>
+            <column name="DELIVERY_ADDRESS" value="Alexandria"/>
+            <column name="CLIENT" value="Daryl Dixon"/>
+            <column name="PAYMENT_TYPE" value="CARD"/>
+            <column name="DELIVERY_TYPE" value="PICKUP"/>
+        </insert>
+        <insert tableName="ORDERS">
+            <column name="ID" value="2"></column>
+            <column name="NUMBER" value="9731520241120"></column>
+            <column name="TOTAL_AMOUNT" value="1000"/>
+            <column name="ORDER_DATE" value="2024-11-20T20:20:00.456+00:00"/>
+            <column name="DELIVERY_ADDRESS" value="Гомель"/>
+            <column name="CLIENT" value="Юлия"/>
+            <column name="PAYMENT_TYPE" value="CASH"/>
+            <column name="DELIVERY_TYPE" value="PICKUP"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="Create table products" author="suhareva">
+        <createTable tableName="PRODUCTS">
+            <column name="ID" autoIncrement="true" type="BIGINT" >
+                <constraints primaryKey="true" unique="true" nullable="false"/>
+            </column>
+            <column name="ARTICLE" type="integer"></column>
+            <column name="NAME" type="character varying(20)" ></column>
+            <column name="QUANTITY" type="integer"></column>
+            <column name="AMOUNT" type="integer"></column>
+            <column name="ORDER_ID" type="BIGINT"></column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

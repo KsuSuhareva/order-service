@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="insert products into products table" author="suhareva">
+        <insert tableName="PRODUCTS">
+<!--            <column name="ID" value="1"></column>-->
+            <column name="ARTICLE" value="123456789"></column>
+            <column name="NAME" value="crossbow"/>
+            <column name="QUANTITY" value="1"/>
+            <column name="AMOUNT" value="1000"/>
+            <column name="ORDER_ID" value="123456789"/>
+        </insert>
+        <insert tableName="PRODUCTS">
+<!--            <column name="ID" value="2"></column>-->
+            <column name="ARTICLE" value="987654321"></column>
+            <column name="NAME" value="Knife"/>
+            <column name="QUANTITY" value="1"/>
+            <column name="AMOUNT" value="350"/>
+            <column name="ORDER_ID" value="123456789"/>
+        </insert>
+        <insert tableName="PRODUCTS">
+<!--            <column name="ID" value="3"></column>-->
+            <column name="ARTICLE" value="756821469"></column>
+            <column name="NAME" value="Тетрадь"/>
+            <column name="QUANTITY" value="10"/>
+            <column name="AMOUNT" value="20"/>
+            <column name="ORDER_ID" value="2"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

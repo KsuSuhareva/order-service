@@ -1,0 +1,14 @@
+services:
+   app:
+     image: 'order-service:latest'
+     build:
+       context: .
+     ports:
+       - 7090:7090
+     container_name: generateNumService
+     depends_on:
+       - redis1
+   redis1:
+      image: "redis:latest"
+      ports:
+       - 6379:6379
