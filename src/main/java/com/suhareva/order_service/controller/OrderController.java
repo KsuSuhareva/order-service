@@ -27,7 +27,7 @@ public class OrderController {
     private final OrderService orderService;
 
     @PostMapping("/saveOrder")
-    @Operation(summary = "Сохранение заказа", description = "После сохранения заказа, возвращает уникальный идентификатор")
+    @Operation(summary = "Сохранение заказа", description = "Сохранение заказа, возвращает уникальный идентификатор")
     public ResponseEntity<OrderNumber> saveOrder(@Valid @RequestBody SaveOrder request) throws DaoException {
         return new ResponseEntity<>(orderService.createOrder(request), HttpStatus.ACCEPTED);
     }

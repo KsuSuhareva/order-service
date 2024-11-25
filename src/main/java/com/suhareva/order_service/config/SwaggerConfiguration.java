@@ -17,7 +17,7 @@ public class SwaggerConfiguration {
                         .version("1.0.0")
                         .contact(new Contact()
                                 .email("suharevaksu86@gmail.com")
-                                .url("https://github.com/KsuSuhareva/OrderService")
+                                .url("https://github.com/KsuSuhareva/order-service")
                                 .name("Ксения Сухарева")
                         )
                 );

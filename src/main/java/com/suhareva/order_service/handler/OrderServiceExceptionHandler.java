@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.reactive.function.client.WebClientException;
+import org.springframework.web.reactive.function.client.WebClientRequestException;
 import org.springframework.web.reactive.function.client.WebClientResponseException;
 
 import java.util.Arrays;
@@ -48,6 +49,13 @@ public class OrderServiceExceptionHandler {
     public ResponseEntity<ErrorMessage> catchDaoException(DaoException e) {
         log.error("Catch exception daoException with cause: {}", Arrays.toString(e.getStackTrace()));
         e.printStackTrace();
+        return new ResponseEntity<>(new ErrorMessage(e), INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(WebClientRequestException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ResponseEntity<ErrorMessage> catchWebClientRequestException(WebClientRequestException e) {
+        log.error("Catch exception webClientResponseException with cause:{} ", e.getMessage());
         return new ResponseEntity<>(new ErrorMessage(e), INTERNAL_SERVER_ERROR);
     }
 
