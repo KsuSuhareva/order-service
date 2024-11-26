@@ -2,7 +2,7 @@ services:
   orderService:
     image: 'order-service:latest'
     build:
-      context: ./order-sevice/order-sevice
+      context: ./order-service
     ports:
       - 9090:9090
     container_name: orderService
@@ -37,7 +37,7 @@ services:
   generateService:
     image: 'generate-service:latest'
     build:
-      context: ./number-generate-service/number-generate-service
+      context: ./number-generate-service
     ports:
       - 9080:9080
     container_name: generateService
